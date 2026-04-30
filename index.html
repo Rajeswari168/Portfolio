@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajeswari M | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+    body {background:#0f172a; color:#fff; overflow-x:hidden;}
+
+    header {display:flex; justify-content:space-between; align-items:center; padding:12px 30px; background:#020617; position:sticky; top:0; z-index:1000;}
+    header h1 {color:#38bdf8; font-size:20px;}
+    nav a {margin:0 10px; color:#fff; text-decoration:none; font-size:14px;}
+    nav a:hover {color:#38bdf8;}
+
+    section {padding:25px 30px; opacity:0; transform:translateY(30px); transition:all 0.6s ease;}
+    section.show {opacity:1; transform:translateY(0);}
+
+    .hero {display:flex; align-items:center; min-height:50vh;}
+    .hero h2 {font-size:32px;}
+    .hero span {color:#38bdf8;}
+    .hero p {font-size:14px; margin-top:5px;}
+
+    .btn {padding:8px 18px; background:#38bdf8; color:#000; border:none; cursor:pointer; margin-top:12px; border-radius:6px; font-size:14px;}
+    .btn:hover {transform:scale(1.05);}
+
+    .card {background:#1e293b; padding:15px; margin:10px 0; border-radius:10px; transition:0.3s; transform:translateY(15px); opacity:0;}
+    .card.show {transform:translateY(0); opacity:1;}
+    .card:hover {transform:translateY(-3px) scale(1.01);}
+
+    h2 {font-size:20px; margin-bottom:6px;}
+
+    .skills span {display:inline-block; background:#38bdf8; color:#000; padding:5px 10px; margin:3px; border-radius:4px; font-size:12px;}
+
+    a {color:#38bdf8; text-decoration:none; font-weight:500;}
+    a:hover {text-decoration:underline;}
+
+    footer {text-align:center; padding:10px; background:#020617; font-size:12px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero show">
+  <div>
+    <h2>Hi, I'm <span>Rajeswari</span></h2>
+    <p>Aspiring Software Developer | Web Developer</p>
+    <button class="btn" onclick="downloadResume()">Resume</button>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    <p>
+      Aspiring Information Technology student with a strong foundation in programming, databases, and modern web development. I enjoy building scalable and user-friendly applications that solve real-world problems.
+    </p>
+    <p style="margin-top:6px; font-size:13px;">
+      During my internship, I worked on responsive web design and gained practical experience in developing interactive web applications. I am particularly interested in full-stack development and AI-based systems.
+    </p>
+    <p style="margin-top:6px; font-size:13px;">
+      ✔ Strong knowledge in Data Structures & Algorithms<br>
+      ✔ Experience in building full-stack applications<br>
+      ✔ Quick learner with strong problem-solving mindset<br>
+      ✔ Passionate about continuous learning and innovation
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>Java</span><span>Python</span><span>C</span>
+    <span>MySQL</span><span>PostgreSQL</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3 style="font-size:16px;">Mutual Fund Tracker & Risk Analyzer</h3>
+    <p style="font-size:13px;">
+      Developed a full-stack web application to help users track their mutual fund investments and analyze portfolio risk using dynamic dashboards.
+    </p>
+    <p style="font-size:13px; margin-top:5px;">
+      Implemented features like real-time data updates, risk calculation, and visual charts to improve decision-making.
+    </p>
+    <p style="font-size:13px; margin-top:5px;">
+      Tech Stack: React, HTML, CSS, Java Servlets, MySQL
+    </p>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:16px;">AI Resume Analyzer</h3>
+    <p style="font-size:13px;">
+      Built a smart system that analyzes resumes, extracts key skills, and provides an ATS score along with improvement suggestions.
+    </p>
+    <p style="font-size:13px; margin-top:5px;">
+      Designed to help students improve their resumes for placements by identifying missing keywords and formatting issues.
+    </p>
+    <p style="font-size:13px; margin-top:5px;">
+      Tech Stack: HTML, CSS, JavaScript
+    </p>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p style="font-size:13px;">mrajeswari818@gmail.com</p>
+    <p style="font-size:13px;">8667274681</p>
+    <p>
+      <a href="https://linkedin.com/in/rajeswari-m-684a99398" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/Rajeswari-168" target="_blank">GitHub</a> |
+      <a href="https://leetcode.com/u/Az6XAB2ZXO/" target="_blank">LeetCode</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Rajeswari</p>
+</footer>
+
+<script>
+function downloadResume(){
+  window.open("RAJESWARI_M_23108042.pdf", "_blank");
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {threshold:0.2});
+
+document.querySelectorAll('section, .card').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

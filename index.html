@@ -1,154 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajeswari M | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
-    body {background:#0f172a; color:#fff; overflow-x:hidden;}
-
-    header {display:flex; justify-content:space-between; align-items:center; padding:12px 30px; background:#020617; position:sticky; top:0; z-index:1000;}
-    header h1 {color:#38bdf8; font-size:20px;}
-    nav a {margin:0 10px; color:#fff; text-decoration:none; font-size:14px;}
-    nav a:hover {color:#38bdf8;}
-
-    section {padding:25px 30px; opacity:0; transform:translateY(30px); transition:all 0.6s ease;}
-    section.show {opacity:1; transform:translateY(0);}
-
-    .hero {display:flex; align-items:center; min-height:50vh;}
-    .hero h2 {font-size:32px;}
-    .hero span {color:#38bdf8;}
-    .hero p {font-size:14px; margin-top:5px;}
-
-    .btn {padding:8px 18px; background:#38bdf8; color:#000; border:none; cursor:pointer; margin-top:12px; border-radius:6px; font-size:14px;}
-    .btn:hover {transform:scale(1.05);}
-
-    .card {background:#1e293b; padding:15px; margin:10px 0; border-radius:10px; transition:0.3s; transform:translateY(15px); opacity:0;}
-    .card.show {transform:translateY(0); opacity:1;}
-    .card:hover {transform:translateY(-3px) scale(1.01);}
-
-    h2 {font-size:20px; margin-bottom:6px;}
-
-    .skills span {display:inline-block; background:#38bdf8; color:#000; padding:5px 10px; margin:3px; border-radius:4px; font-size:12px;}
-
-    a {color:#38bdf8; text-decoration:none; font-weight:500;}
-    a:hover {text-decoration:underline;}
-
-    footer {text-align:center; padding:10px; background:#020617; font-size:12px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajeswari M | Full Stack Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>My Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-<section class="hero show">
-  <div>
-    <h2>Hi, I'm <span>Rajeswari</span></h2>
-    <p>Aspiring Software Developer | Web Developer</p>
-    <button class="btn" onclick="downloadResume()">Resume</button>
-  </div>
-</section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Rajeswari <span>M</span></h1>
+                <h2 class="hero-subtitle">Aspiring <span>Software Developer</span></h2>
+                <p class="hero-desc">
+                    Information Technology student passionate about building scalable, user-friendly applications and AI-based systems. Turning ideas into elegant, real-world solutions.
+                </p>
 
-<section id="about">
-  <h2>About</h2>
-  <div class="card">
-    <p>
-      Aspiring Information Technology student with a strong foundation in programming, databases, and modern web development. I enjoy building scalable and user-friendly applications that solve real-world problems.
-    </p>
-    <p style="margin-top:6px; font-size:13px;">
-      During my internship, I worked on responsive web design and gained practical experience in developing interactive web applications. I am particularly interested in full-stack development and AI-based systems.
-    </p>
-    <p style="margin-top:6px; font-size:13px;">
-      ✔ Strong knowledge in Data Structures & Algorithms<br>
-      ✔ Experience in building full-stack applications<br>
-      ✔ Quick learner with strong problem-solving mindset<br>
-      ✔ Passionate about continuous learning and innovation
-    </p>
-  </div>
-</section>
+                <div class="social-links-hero">
+                    <a href="https://www.linkedin.com/in/rajeswari1808/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Rajeswari168" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Az6XAB2ZXO/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ring">
+                    <img src="profile.jpg" alt="Rajeswari M" class="hero-photo" />
+                </div>
+            </div>
+        </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card skills">
-    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-    <span>Java</span><span>Python</span><span>C</span>
-    <span>MySQL</span><span>PostgreSQL</span>
-  </div>
-</section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-container glass-card reveal">
+                <div class="about-text">
+                    <p>I am an aspiring Information Technology student with a strong foundation in programming, databases, and modern web development. I thrive on challenges and enjoy building applications that solve real-world problems.</p>
+                    <p>During my internship, I focused on responsive web design and gained hands-on experience in developing interactive, seamless web applications. My true interests lie in <strong>Full-Stack Development</strong> and <strong>AI-based systems</strong>.</p>
+                    
+                    <ul class="about-highlights">
+                        <li><i class="fas fa-check-circle"></i> Strong knowledge in Data Structures & Algorithms</li>
+                        <li><i class="fas fa-check-circle"></i> Experience building end-to-end full-stack applications</li>
+                        <li><i class="fas fa-check-circle"></i> Quick learner with a strong problem-solving mindset</li>
+                        <li><i class="fas fa-check-circle"></i> Passionate about continuous learning and innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid reveal">
+                <!-- Frontend -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React JS</span>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-copyright"></i> C</span>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Database</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-dolphin" style="font-size:0.85em"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-elephant" style="font-size:0.85em"></i> PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="card">
-    <h3 style="font-size:16px;">Mutual Fund Tracker & Risk Analyzer</h3>
-    <p style="font-size:13px;">
-      Developed a full-stack web application to help users track their mutual fund investments and analyze portfolio risk using dynamic dashboards.
-    </p>
-    <p style="font-size:13px; margin-top:5px;">
-      Implemented features like real-time data updates, risk calculation, and visual charts to improve decision-making.
-    </p>
-    <p style="font-size:13px; margin-top:5px;">
-      Tech Stack: React, HTML, CSS, Java Servlets, MySQL
-    </p>
-  </div>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-chart-line project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Rajeswari168/Mutual-Fund-Performance-Tracker-And-Risk-Analyzer---Project.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Mutual Fund Tracker & Risk Analyzer</h3>
+                        <p class="project-description">
+                            A comprehensive full-stack web application designed to help users track mutual fund investments and analyze portfolio risk via dynamic dashboards. Features real-time data updates, risk calculations, and intuitive visual charts for enhanced decision-making.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Java Servlets</span>
+                            <span>MySQL</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
 
-  <div class="card">
-    <h3 style="font-size:16px;">AI Resume Analyzer</h3>
-    <p style="font-size:13px;">
-      Built a smart system that analyzes resumes, extracts key skills, and provides an ATS score along with improvement suggestions.
-    </p>
-    <p style="font-size:13px; margin-top:5px;">
-      Designed to help students improve their resumes for placements by identifying missing keywords and formatting issues.
-    </p>
-    <p style="font-size:13px; margin-top:5px;">
-      Tech Stack: HTML, CSS, JavaScript
-    </p>
-  </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-brain project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Rajeswari168" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI Recruitment Intelligence System</h3>
+                        <p class="project-description">
+                            AI Recruiter Intelligence System is an AI-powered tool that analyzes resumes against job descriptions to evaluate candidate-job fit. It generates ATS score, job match score, skill gap analysis, and provides actionable improvement suggestions using Natural Language Processing techniques. It helps recruiters quickly shortlist suitable candidates and enables job seekers to optimize their resumes for better opportunities.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
 
-</section>
+            </div>
+        </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p style="font-size:13px;">mrajeswari818@gmail.com</p>
-    <p style="font-size:13px;">8667274681</p>
-    <p>
-      <a href="https://linkedin.com/in/rajeswari-m-684a99398" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Rajeswari-168" target="_blank">GitHub</a> |
-      <a href="https://leetcode.com/u/Az6XAB2ZXO/" target="_blank">LeetCode</a>
-    </p>
-  </div>
-</section>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-grid reveal">
+                <!-- Left Side: Message -->
+                <div class="contact-message glass-card">
+                    <i class="fas fa-paper-plane contact-glow-icon"></i>
+                    <h3>Let's build something together!</h3>
+                    <p>I am currently looking for new opportunities, collaborative projects, or mentoring. Whether you have a job opening, a project idea, or just want to connect, feel free to reach out!</p>
+                </div>
+                
+                <!-- Right Side: Actionable Cards -->
+                <div class="contact-details">
+                    <a href="mailto:mrajeswari818@gmail.com" class="contact-card glass-card">
+                        <div class="card-icon-wrap">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-text">
+                            <h4>Email</h4>
+                            <span>mrajeswari818@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+918667274681" class="contact-card glass-card">
+                        <div class="card-icon-wrap">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="card-text">
+                            <h4>Contact Number</h4>
+                            <span>+91 8667274681</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer>
-  <p>© 2026 Rajeswari</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="social-links-footer">
+            <a href="https://www.linkedin.com/in/rajeswari1808/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Rajeswari168" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/u/Az6XAB2ZXO/" target="_blank"><i class="fas fa-code"></i></a>
+        </div>
+        <p>Designed & Built by Rajeswari M © 2026</p>
+    </footer>
 
-<script>
-function downloadResume(){
-  window.open("RAJESWARI_M_23108042.pdf", "_blank");
-}
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-}, {threshold:0.2});
-
-document.querySelectorAll('section, .card').forEach(el => observer.observe(el));
-</script>
-
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>
